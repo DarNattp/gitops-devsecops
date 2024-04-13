@@ -28,6 +28,8 @@ spec:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
       serviceAccountName: go-micro 
+      imagePullSecrets:
+      - name: harbor-cred
       terminationGracePeriodSeconds: 5
       restartPolicy: Always
       initContainers:
