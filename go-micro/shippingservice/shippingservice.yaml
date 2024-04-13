@@ -30,7 +30,7 @@ spec:
       - name: harbor-cred
       containers:
         - name: server
-          image: harbor.creativebox.dev/devsecops/shippingservice
+          image: harbor.creativebox.dev/devsecops/shippingservice:3
           ports:
             - containerPort: 50051
           env:

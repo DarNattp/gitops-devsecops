@@ -16,7 +16,7 @@ spec:
       - name: harbor-cred
       containers:
         - name: server
-          image: harbor.creativebox.dev/devsecops/checkoutservice
+          image: harbor.creativebox.dev/devsecops/checkoutservice:3
           ports:
             - containerPort: 5050
           readinessProbe:

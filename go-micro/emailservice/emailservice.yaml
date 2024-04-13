@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
         - name: server
-          image: harbor.creativebox.dev/devsecops/emailservice
+          image: harbor.creativebox.dev/devsecops/emailservice:3
           ports:
             - containerPort: 8080
           env:
