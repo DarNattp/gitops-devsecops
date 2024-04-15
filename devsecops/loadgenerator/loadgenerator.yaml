@@ -18,6 +18,8 @@ spec:
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
+      imagePullSecrets:
+      - name: harbor-cred
       restartPolicy: Always
       securityContext:
         fsGroup: 1000
@@ -56,7 +58,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: loadgenerator
+        image: harbor.creativebox.dev/devsecops/loadgenerator:1
         env:
         - name: FRONTEND_ADDR
           value: "api-gateway:80"
