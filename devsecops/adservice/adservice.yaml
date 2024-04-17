@@ -31,7 +31,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: harbor.creativebox.dev/devsecops/adservice:60
+        image: harbor.creativebox.dev/devsecops/adservice:61
         ports:
         - containerPort: 9555
         env:
