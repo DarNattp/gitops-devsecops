@@ -31,7 +31,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: harbor.creativebox.dev/devsecops/currencyservice:1
+        image: harbor.creativebox.dev/devsecops/currencyservice:5
         ports:
         - name: grpc
           containerPort: 7000
