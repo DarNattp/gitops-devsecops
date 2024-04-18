@@ -30,7 +30,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: harbor.creativebox.dev/devsecops/checkoutservice:1
+          image: harbor.creativebox.dev/devsecops/checkoutservice:12
           ports:
           - containerPort: 5050
           readinessProbe:
