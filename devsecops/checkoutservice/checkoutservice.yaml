@@ -14,6 +14,8 @@ spec:
         app: checkoutservice
     spec:
       serviceAccountName: default
+      imagePullSecrets:
+      - name: harbor-cred
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -28,7 +30,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: harbor.creativebox.dev/devsecops/checkoutservice:1
+          image: harbor.creativebox.dev/devsecops/checkoutservice:12
           ports:
           - containerPort: 5050
           readinessProbe:

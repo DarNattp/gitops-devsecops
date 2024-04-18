@@ -15,6 +15,8 @@ spec:
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
+      imagePullSecrets:
+      - name: harbor-cred
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -29,7 +31,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: harbor.creativebox.dev/devsecops/adservice:42
+        image: harbor.creativebox.dev/devsecops/adservice:61
         ports:
         - containerPort: 9555
         env:

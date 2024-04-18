@@ -16,6 +16,8 @@ spec:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
       serviceAccountName: default
+      imagePullSecrets:
+      - name: harbor-cred
       securityContext:
         fsGroup: 1000
         runAsGroup: 1000
@@ -30,7 +32,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: harbor.creativebox.dev/devsecops/api-gateway:1
+          image: harbor.creativebox.dev/devsecops/api-gateway:23
           ports:
           - containerPort: 8080
           readinessProbe:
