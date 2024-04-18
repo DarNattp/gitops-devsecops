@@ -58,7 +58,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: harbor.creativebox.dev/devsecops/loadgenerator:1
+        image: harbor.creativebox.dev/devsecops/loadgenerator:14
         env:
         - name: FRONTEND_ADDR
           value: "api-gateway:80"
