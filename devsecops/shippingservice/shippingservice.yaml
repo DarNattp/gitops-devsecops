@@ -30,7 +30,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: harbor.creativebox.dev/devsecops/shippingservice:11
+        image: harbor.creativebox.dev/devsecops/shippingservice:13
         ports:
         - containerPort: 50051
         env:
