@@ -51,10 +51,10 @@ spec:
           value: "1"
         resources:
           requests:
-            cpu: 100m
-            memory: 220Mi
+            cpu: 1
+            memory: 1Gi
           limits:
-            cpu: 500m
+            cpu: 1
             memory: 1Gi
 ---
 apiVersion: v1
