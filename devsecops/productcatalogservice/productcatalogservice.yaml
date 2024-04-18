@@ -31,7 +31,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: harbor.creativebox.dev/devsecops/productcatalogservice:8
+        image: harbor.creativebox.dev/devsecops/productcatalogservice:10
         ports:
         - containerPort: 3550
         env:
