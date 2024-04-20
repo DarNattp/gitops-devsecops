@@ -41,6 +41,7 @@ spec:
         volumeMounts:
         - mountPath: /data
           name: redis-data
+        command: ["redis-server", "--requirepass", "$(REDIS_PASSWORD)"]          
         env:
         - name: REDIS_PASSWORD
           value: "qwerty"
