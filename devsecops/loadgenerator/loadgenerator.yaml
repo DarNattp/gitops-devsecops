@@ -63,7 +63,7 @@ spec:
         - name: FRONTEND_ADDR
           value: "api-gateway:80"
         - name: USERS
-          value: "1000"
+          value: "10"
         resources:
           requests:
             memory: 1Gi
