@@ -45,8 +45,11 @@ spec:
         env:
         - name: REDIS_ADDR
           value: "redis-cart:6379"
-        # - name: REDIS_PASSWORD
-        #   value: "qwerty"          
+        - name: REDIS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: redis-password
+              key: REDIS_PASSWORD     
         resources:
           requests:
             cpu: 200m
