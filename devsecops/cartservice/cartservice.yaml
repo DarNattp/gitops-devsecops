@@ -12,6 +12,10 @@ spec:
     metadata:
       labels:
         app: cartservice
+      annotations:
+        vault.hashicorp.com/agent-inject: "true"
+        vault.hashicorp.com/role: "redis-role"
+        vault.hashicorp.com/agent-inject-secret-redis-config.txt: "internal/data/redis/config"        
     spec:
       serviceAccountName: redis-cart
       terminationGracePeriodSeconds: 5
