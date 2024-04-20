@@ -19,7 +19,7 @@ spec:
         vault.hashicorp.com/agent-inject-template-redis-password: |
           {{- with secret "internal/data/redis/config" -}}
           export REDIS_PASSWORD="{{ .Data.data.password }}"
-          {{- end }}          
+          {{- end -}}          
     spec:
       serviceAccountName: redis-cart
       terminationGracePeriodSeconds: 5
