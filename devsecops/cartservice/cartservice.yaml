@@ -18,7 +18,7 @@ spec:
         vault.hashicorp.com/agent-inject-secret-redis-config.txt: "internal/data/redis/config"      
         vault.hashicorp.com/agent-inject-template-redis-password: |
           {{- with secret "internal/data/redis/config" -}}
-          REDIS_PASSWORD="{{ .Data.data.password }}"
+          redis-password: "{{ .Data.data.password }}"
           {{- end -}}          
     spec:
       serviceAccountName: redis-cart
@@ -49,7 +49,7 @@ spec:
           valueFrom:
             secretKeyRef:
               name: redis-password
-              key: REDIS_PASSWORD     
+              key: redis-password  
         resources:
           requests:
             cpu: 200m
