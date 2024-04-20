@@ -13,7 +13,7 @@ spec:
       labels:
         app: cartservice
     spec:
-      serviceAccountName: default
+      serviceAccountName: redis-cart
       terminationGracePeriodSeconds: 5
       imagePullSecrets:
       - name: harbor-cred
