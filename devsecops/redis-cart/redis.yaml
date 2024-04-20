@@ -41,6 +41,13 @@ spec:
         volumeMounts:
         - mountPath: /data
           name: redis-data
+        env:
+        - name: REDIS_PASSWORD
+          value: "qwerty"
+          # valueFrom:
+            # secretKeyRef:
+            #   name: redis-secrets
+            #   key: redis-password          
         resources:
           limits:
             memory: 256Mi
