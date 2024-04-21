@@ -48,6 +48,9 @@ spec:
         #   valueFrom:
         #     fieldRef:
         #       fieldPath: spec.containers[0].env[1].value
+        volumeMounts:
+        - name: secrets-store-inline
+          mountPath: /mnt/secrets
         resources:
           requests:
             cpu: 200m
