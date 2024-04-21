@@ -15,9 +15,9 @@ spec:
       annotations:
         vault.hashicorp.com/agent-inject: "true"
         vault.hashicorp.com/role: "devsecops"
-        vault.hashicorp.com/agent-inject-secret-redis-password.txt: "secret/redis-cart/data/config"      
+        vault.hashicorp.com/agent-inject-secret-redis-password.txt: "secret/redis-cart/config"      
         # vault.hashicorp.com/agent-inject-template-redis-password: |
-        #   {{- with secret "secret/redis-cart/data/config" -}}
+        #   {{- with secret "secret/redis-cart/config" -}}
         #   export REDIS_PASSWORD="{{ .Data.data.password }}"
         #   {{- end -}}          
     spec:
