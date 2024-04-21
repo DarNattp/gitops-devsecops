@@ -14,12 +14,12 @@ spec:
         app: cartservice
       annotations:
         vault.hashicorp.com/agent-inject: "true"
-        vault.hashicorp.com/role: "redis-role"
-        vault.hashicorp.com/agent-inject-secret-redis-password: "internal/data/redis/config"      
-        vault.hashicorp.com/agent-inject-template-redis-password: |
-          {{- with secret "internal/data/redis/config" -}}
-          export REDIS_PASSWORD="{{ .Data.data.password }}"
-          {{- end -}}          
+        vault.hashicorp.com/role: "devsecops"
+        vault.hashicorp.com/agent-inject-secret-redis-password.txt: "secret/redis-cart/data/config"      
+        # vault.hashicorp.com/agent-inject-template-redis-password: |
+        #   {{- with secret "secret/redis-cart/data/config" -}}
+        #   export REDIS_PASSWORD="{{ .Data.data.password }}"
+        #   {{- end -}}          
     spec:
       serviceAccountName: redis-cart
       terminationGracePeriodSeconds: 5
