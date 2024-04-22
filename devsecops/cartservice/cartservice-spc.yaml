@@ -17,5 +17,5 @@ spec:
       type: Opaque
       data:
         #- objectName: <objectName> or <objectAlias> 
-        - objectName: redispass
+        - objectName: redis-pass
           key: pwd
