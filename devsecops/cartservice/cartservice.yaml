@@ -20,7 +20,7 @@ spec:
             readOnly: true
             volumeAttributes:
               secretProviderClass: redis-spc
-      serviceAccountName: redis-cart
+      serviceAccountName: vault-auth-sa
       terminationGracePeriodSeconds: 5
       imagePullSecrets:
       - name: harbor-cred
