@@ -1,0 +1,21 @@
+apiVersion: secrets-store.csi.x-k8s.io/v1
+kind: SecretProviderClass
+metadata:
+  name: redis-spc
+  namespace: devsecops
+spec:
+  parameters:
+    objects: |
+      - objectName: "redis-pass"
+        secretPath: "secret/redis-pass"
+        secretKey: "pwd"
+    vaultAddress: http://192.168.119.31:8200
+    roleName: redis
+  provider: vault
+  secretObjects:                
+    - secretName: redis-spc-secret
+      type: Opaque
+      data:
+        #- objectName: <objectName> or <objectAlias> 
+        - objectName: redispass
+          key: pwd
