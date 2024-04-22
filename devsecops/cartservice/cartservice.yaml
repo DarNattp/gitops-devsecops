@@ -42,7 +42,7 @@ spec:
         ports:
         - containerPort: 7070
         env:
-        - name: redis-pass
+        - name: REDIS_PASSWORD
           valueFrom:
             secretKeyRef:
               name: redis-spc-secret
