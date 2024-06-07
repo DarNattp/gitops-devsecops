@@ -32,7 +32,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: harbor.creativebox.dev/devsecops/frontend:23
+          image: harbor.creativebox.dev/devsecops/api-gateway:23
           ports:
           - containerPort: 8080
           readinessProbe:
